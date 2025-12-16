@@ -1,0 +1,139 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(
+    135deg,
+    #2b1055,
+    /* tím đậm */ #1b2a6b,
+    /* xanh đậm */ #000428 /* xanh đen */
+  );
+}
+.container {
+  width: 430px;
+  margin: 50px auto;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+}
+.from-box {
+  width: 100%;
+  height: 100%;
+}
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+.field {
+  position: relative;
+  margin-bottom: 20px;
+}
+.field input {
+  background: rgba(255, 255, 255, 0.06);
+  border: none;
+  color: white;
+}
+
+.field input {
+  width: 100%;
+  padding: 12px 10px;
+  box-sizing: border-box;
+  border-radius: 50px;
+}
+
+.field label {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+/* khi focus hoặc đã nhập */
+.field input:focus + label,
+.field input:valid + label {
+  top: -6px;
+  font-size: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 0 5px;
+  color: white;
+}
+.btn-submit button {
+  width: 100%;
+  padding: 12px;
+  background: blue; /* xanh hiện đại */
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 20px;
+}
+.btn-submit:hover button {
+  background: rgb(0, 0, 176);
+}
+
+.btn-submit:active button {
+  transform: scale(0.98);
+}
+.btn-submit-group {
+  display: flex;
+  gap: 10px;
+  justify-self: right;
+}
+.back button {
+  background-color: darkgray;
+}
+.back:hover button {
+  background-color: gray;
+}
+.btn-submit-group button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+}
+.password-field {
+  position: relative;
+}
+.password-field button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+}
+.note {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: white;
+}
+.note a {
+  color: #00c6ff; /* xanh sáng */
+  text-decoration: none;
+}
+.container #Sign-up.from-box {
+  tranfrom: translateX(0);
+}
+.container #Sign-up.from-box.active {
+  tranfrom: translateX(-50%);
+}
+.checkbox {
+  color: white;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.checkbox a {
+  float: right;
+  color: #00c6ff;
+  text-decoration: none;
+}
